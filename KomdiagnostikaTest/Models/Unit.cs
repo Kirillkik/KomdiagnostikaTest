@@ -27,8 +27,8 @@ namespace KomdiagnostikaTest.Models
             }
         }
 
-        public ObservableCollection<IUnit> Units { get; set; }
-        public ObservableCollection<ISensor> Sensors { get; set; }
+        public ObservableCollection<IUnit> Units { get; set; } = new ObservableCollection<IUnit>();
+        public ObservableCollection<ISensor> Sensors { get; set; } = new ObservableCollection<ISensor>();
         private void ItemsOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             if (e.OldItems != null)

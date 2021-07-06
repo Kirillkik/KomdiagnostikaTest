@@ -29,7 +29,7 @@ namespace KomdiagnostikaTest.Models
             }
         }
 
-        public ObservableCollection<IAggregate> Aggregates { get; set; }
+        public ObservableCollection<IAggregate> Aggregates { get; set; } = new ObservableCollection<IAggregate>();
         private void ItemsOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             if (e.OldItems != null)

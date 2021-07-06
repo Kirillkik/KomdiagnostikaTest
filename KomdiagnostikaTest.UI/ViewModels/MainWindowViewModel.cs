@@ -11,11 +11,21 @@ namespace KomdiagnostikaTest.UI.ViewModels
     public class MainWindowViewModel : INotifyPropertyChanged
     {
         private Parameter speed = new Parameter { Name = "Скорость", Value = 10, State = Enums.State.Norm };
-        private Sensor tempretureSensor = new Sensor { Name = "Температура" };
+        private Sensor tempretureSensor = new Sensor { Name = "Термометр" };
+        private Unit bearing = new Unit { Name = "Подшипник" };
+        private Unit bearingSupport = new Unit { Name = "Подшипниковая опора" };
+        private Aggregate pump = new Aggregate { Name = "Насос" };
+        private Facility somethingFacility = new Facility { Name = "Установка" };
+        private Factory somethingFactory = new Factory { Name = "Завод" };
 
         public MainWindowViewModel()
         {
-            TempretureSensor.Parameters.Add(speed);
+            tempretureSensor.Parameters.Add(speed);
+            bearingSupport.Units.Add(bearing);
+            bearingSupport.Sensors.Add(tempretureSensor);
+            pump.Units.Add(bearingSupport);
+            somethingFacility.Aggregates.Add(pump);
+            somethingFactory.Facilities.Add(somethingFacility);
         }
 
         public Parameter Speed
@@ -27,7 +37,6 @@ namespace KomdiagnostikaTest.UI.ViewModels
                 OnPropertyChanged(nameof(Speed));
             }
         }
-
         public Sensor TempretureSensor
         {
             get { return tempretureSensor; }
@@ -35,6 +44,51 @@ namespace KomdiagnostikaTest.UI.ViewModels
             {
                 tempretureSensor = value;
                 OnPropertyChanged(nameof(TempretureSensor));
+            }
+        }
+        public Unit Bearing
+        {
+            get { return bearing; }
+            set
+            {
+                bearing = value;
+                OnPropertyChanged(nameof(Bearing));
+            }
+        }
+        public Unit BearingSupport
+        {
+            get { return bearingSupport; }
+            set
+            {
+                bearingSupport = value;
+                OnPropertyChanged(nameof(BearingSupport));
+            }
+        }
+        public Aggregate Pump
+        {
+            get { return pump; }
+            set
+            {
+                pump = value;
+                OnPropertyChanged(nameof(Pump));
+            }
+        }
+        public Facility SomethingFacility
+        {
+            get { return somethingFacility; }
+            set
+            {
+                somethingFacility = value;
+                OnPropertyChanged(nameof(SomethingFacility));
+            }
+        }
+        public Factory SomethingFactory
+        {
+            get { return somethingFactory; }
+            set
+            {
+                somethingFactory = value;
+                OnPropertyChanged(nameof(SomethingFactory));
             }
         }
 

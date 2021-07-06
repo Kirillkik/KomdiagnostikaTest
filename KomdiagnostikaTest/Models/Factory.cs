@@ -29,7 +29,7 @@ namespace KomdiagnostikaTest.Models
             }
         }
 
-        public ObservableCollection<IFacility> Facilities { get; set; }
+        public ObservableCollection<IFacility> Facilities { get; set; } = new ObservableCollection<IFacility>();
         private void ItemsOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             if (e.OldItems != null)

@@ -29,7 +29,7 @@ namespace KomdiagnostikaTest.Models
             }
         }
 
-        public ObservableCollection<IUnit> Units { get; set; }
+        public ObservableCollection<IUnit> Units { get; set; } = new ObservableCollection<IUnit>();
         private void ItemsOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             if (e.OldItems != null)
