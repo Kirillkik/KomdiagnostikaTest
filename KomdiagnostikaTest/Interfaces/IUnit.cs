@@ -13,14 +13,6 @@ namespace KomdiagnostikaTest.Interfaces
         public string Name { get; set; }
         public ObservableCollection<IUnit> Units { get; set; }
         public ObservableCollection<ISensor> Sensors { get; set; }
-        public State State
-        {
-            get
-            {
-                var unitsState = Units.Max(x => x.State);
-                var sensorsState = Sensors.Max(x => x.State);
-                return unitsState > sensorsState ? unitsState : sensorsState; 
-            }
-        }
+        public State State { get; }
     }
 }

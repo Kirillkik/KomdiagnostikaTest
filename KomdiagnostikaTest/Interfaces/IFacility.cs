@@ -12,6 +12,6 @@ namespace KomdiagnostikaTest.Interfaces
     {
         public string Name { get; set; }
         public ObservableCollection<IAggregate> Aggregates { get; set; }
-        public State State { get { return Aggregates.Max(x => x.State); } }
+        public State State { get; }
     }
 }

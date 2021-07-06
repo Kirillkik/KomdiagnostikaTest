@@ -5,11 +5,11 @@ using System.Runtime.CompilerServices;
 
 namespace KomdiagnostikaTest.Models
 {
-    class Parameter : IParameter, INotifyPropertyChanged
+    public class Parameter : IParameter, INotifyPropertyChanged
     {
-        public string name { get; set; }
-        public double value { get; set; }
-        public State state { get; set; }
+        private string name { get; set; }
+        private double value { get; set; }
+        private State state { get; set; } = State.Norm;
 
         public string Name
         {

@@ -12,6 +12,6 @@ namespace KomdiagnostikaTest.Interfaces
     {
         public string Name { get; set; }
         public ObservableCollection<IFacility> Facilities { get; set; }
-        public State State { get { return Facilities.Max(x => x.State); }  }
+        public State State { get; }
     }
 }
