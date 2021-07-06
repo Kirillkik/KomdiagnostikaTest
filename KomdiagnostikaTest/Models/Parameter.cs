@@ -1,13 +1,11 @@
 ﻿using KomdiagnostikaTest.Enums;
 using KomdiagnostikaTest.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
-namespace KomdiagnostikaTest.Models.Parameters
+
+namespace KomdiagnostikaTest.Models
 {
-    public class Acceleration : IParameter, INotifyPropertyChanged
+    class Parameter : IParameter, INotifyPropertyChanged
     {
         public string name { get; set; }
         public double value { get; set; }

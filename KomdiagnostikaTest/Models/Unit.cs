@@ -1,14 +1,11 @@
 ﻿using KomdiagnostikaTest.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
 
-namespace KomdiagnostikaTest.Models.Units
+namespace KomdiagnostikaTest.Models
 {
-    public class Bearing : IUnit, INotifyPropertyChanged
+    class Unit : IUnit, INotifyPropertyChanged
     {
         private string name;
         public string Name

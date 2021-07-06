@@ -1,14 +1,11 @@
 ﻿using KomdiagnostikaTest.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
 
-namespace KomdiagnostikaTest.Models.Sensors
+namespace KomdiagnostikaTest.Models
 {
-    public class PressureSensor : ISensor, INotifyPropertyChanged
+    class Sensor : ISensor, INotifyPropertyChanged
     {
         private string name;
         public string Name
